@@ -43,3 +43,4 @@ https://pinout.xyz/
 
 More to come soon! :) Next, I want to use openCV to do some object detection and mount the Pi directly to the car. Also, I could get a much cleaner system if I solder the cables directly to the car itself rather than go through the RC transmitter. It might work with a MOSFET power control kit. Also, This project could be adapted on a raspberry pi zero or another microcontroller with all the necessary functionality like an esp32.
 
+If you have any questions, do not hesitate file an issue and I will be happy to help you get your own project working. Alternatively, I can be reached at nchlsschmidt@gmail.com.
