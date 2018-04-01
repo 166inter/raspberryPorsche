@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 
+#special thanks to kamalraghav81 for helping me out with classes and threading!
+
 import RPi.GPIO as GPIO
 import threading, queue, random
 import sys, tty, termios
