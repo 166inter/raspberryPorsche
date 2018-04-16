@@ -1,3 +1,9 @@
+# Build Update April 16, 2018
+
+After reading more of the picamera advanced recipes docs, it looks like it is possible do image processing without needing to store the images on the disk. This may prove very useful gived the micro sd card's limited storage capacity. 
+
+The image capturing code will have to be combined with the AutonomousX.X.X.py code to control the car using the input images. Currently, the directional commands (left, forward-left, forward, reverse, etc) are printed in the terminal when the script is run. However, this input should be logged in a file to use as training data. Similarly, the camera stream images should also be logged in a folder. In order to match the images with the input commands, time stamps can possibly be used.
+
 # Build Update April 15, 2018
 
 I only had a few hours today to work on this project out of the whole weekend. There are several options when deciding on a camera streaming/capture setup. 'Motion' is one of them; RPi-Cam-Web is another. PiCamera also has some built-in tools for capturing a sequence of images, allowing the user to set the frame rate, start and end time, and more. The resources/ code found on the raspberry pi stack exchange looks like a good start. In order to get the camerea stream working at the lowest possible latency, there is some useful information to follow in the picamera docs in section 5 (advanced recipes). Also it is important to note that if motion is installed, it needs to be manually deactivated before using raspistill, and other built-in camera modules.
