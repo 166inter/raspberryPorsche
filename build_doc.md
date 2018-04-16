@@ -1,3 +1,7 @@
+# Build Update April 15, 2018
+
+I only had a few hours today to work on this project out of the whole weekend. There are several options when deciding on a camera streaming/capture setup. 'Motion' is one of them; RPi-Cam-Web is another. PiCamera also has some built-in tools for capturing a sequence of images, allowing the user to set the frame rate, start and end time, and more. The resources/ code found on the raspberry pi stack exchange looks like a good start. In order to get the camerea stream working at the lowest possible latency, there is some useful information to follow in the picamera docs in section 5 (advanced recipes). Also it is important to note that if motion is installed, it needs to be manually deactivated before using raspistill, and other built-in camera modules.
+
 # Build Update Apil 13, 2018
 
 The power arrangement is not perfect, but working well enough to start to develop other parts of the car. 
