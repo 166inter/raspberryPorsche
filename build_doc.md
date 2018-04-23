@@ -1,3 +1,12 @@
+To do: </br>
+<s>fix threadding so that it stops when you press x (return preset state keeps triggering)</s> </br>
+<s>fix file csv file log (currently creating file but not populating)</s>
+
+# Build Update April 19, 2018
+-got log working
+-need to optimize code, eliminate while loops, etc
+-get camera working simultaneously with AutonomousX.X.X
+
 # Build Update April 16, 2018
 
 After reading more of the picamera advanced recipes docs, it looks like it is possible do image processing without needing to store the images on the disk. This may prove very useful gived the micro sd card's limited storage capacity. 
