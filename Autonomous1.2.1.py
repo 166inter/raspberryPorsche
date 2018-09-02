@@ -19,11 +19,14 @@ reverse_pin = 6
 
 left_pin = 24
 right_pin = 23
+light_pin = 21
+
+headlight_toggle = "OFF"
 
 GPIO.setwarnings(False)
 GPIO.cleanup()
 GPIO.setmode(GPIO.BCM)
-GPIO.setup([forward_pin, reverse_pin, left_pin, right_pin], GPIO.OUT)
+GPIO.setup([forward_pin, reverse_pin, left_pin, right_pin, light_pin], GPIO.OUT)
 
 q = queue.Queue(maxsize=10)
 
@@ -181,7 +184,21 @@ if __name__ == "__main__":
         keys = ([key.get_pressed()[K_a],key.get_pressed()[K_d],  
 		key.get_pressed()[K_w], key.get_pressed()[K_s]])
         
-        print(keys)
+	
+	if key.get_pressed()[K_l] == 1:
+		if headlight_toggle == "ON":
+			print("headlights off")
+			headlight_toggle = "OFF"
+			GPIO.output(headlight_pin, GPIO.LOW)
+			
+		else:
+			print("headlights on")
+			headlight_toggle = "ON"
+			GPIO.output(headlight_pin, GPIO.HIGH)
+			
+	
+        print(keys)		
+
         if keys == [1,0,0,0]:
             q.put('a')
         elif keys == [0,1,0,0]:
