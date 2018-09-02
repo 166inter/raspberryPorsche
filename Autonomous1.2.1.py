@@ -182,22 +182,22 @@ if __name__ == "__main__":
     while True:
         #rand = random.uniform(0, 5)
         keys = ([key.get_pressed()[K_a],key.get_pressed()[K_d],  
-		key.get_pressed()[K_w], key.get_pressed()[K_s]])
+        key.get_pressed()[K_w], key.get_pressed()[K_s]])
         
-	
-	if key.get_pressed()[K_l] == 1:
-		if headlight_toggle == "ON":
-			print("headlights off")
-			headlight_toggle = "OFF"
-			GPIO.output(headlight_pin, GPIO.LOW)
-			
-		else:
-			print("headlights on")
-			headlight_toggle = "ON"
-			GPIO.output(headlight_pin, GPIO.HIGH)
-			
-	
-        print(keys)		
+    
+    if key.get_pressed()[K_l] == 1:
+        if headlight_toggle == "ON":
+            print("headlights off")
+            headlight_toggle = "OFF"
+            GPIO.output(headlight_pin, GPIO.LOW)
+            
+        else:
+            print("headlights on")
+            headlight_toggle = "ON"
+            GPIO.output(headlight_pin, GPIO.HIGH)
+            
+    
+        print(keys)     
 
         if keys == [1,0,0,0]:
             q.put('a')
